@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
+// Import các trang
+import HomePage from './pages/HomePage/HomePage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import ServicePage from './pages/ServicePage/ServicePage';
+import MenuPage from './pages/MenuPage/MenuPage';
+import BookingPage from './pages/BookingPage/BookingPage';
+import TeamPage from './pages/TeamPage/TeamPage';
+import TestimonialPage from './pages/TestimonialPage/TestimonialPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+
+// Import Spinner component
+import Spinner from './components/Spinner/Spinner';
+
+// Import scrollToTop utility
+import { initScrollToTop } from './utils/scrollToTop';
+import {eventWrapper} from "@testing-library/user-event/dist/utils";
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  useEffect(() => {
+    // Ẩn spinner sau khi tải trang
+    const spinner = document.getElementById('spinner');
+    if (spinner) {
+      setTimeout(() => {
+        spinner.classList.remove('show');
+      }, 1000);
+    }
+
+    // Khởi tạo scroll to top button
+    initScrollToTop();
+  }, []);
+
+  return (eventWrapper());
 }
 
 export default App;
