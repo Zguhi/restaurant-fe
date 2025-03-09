@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Menu.css';
+import MenuItem from '../MenuItem/MenuItem';
+
+// Lưu ý: Đường dẫn hình ảnh có thể cần điều chỉnh
 import menu1 from '../../assets/images/menu-1.jpg';
 import menu2 from '../../assets/images/menu-2.jpg';
 import menu3 from '../../assets/images/menu-3.jpg';
@@ -10,6 +13,41 @@ import menu7 from '../../assets/images/menu-7.jpg';
 import menu8 from '../../assets/images/menu-8.jpg';
 
 function Menu() {
+    const [activeTab, setActiveTab] = useState('tab-1');
+
+    const menuItems = {
+        breakfast: [
+            { image: menu1, name: "Chicken Burger", price: "$115" },
+            { image: menu2, name: "Chicken Burger", price: "$115" },
+            { image: menu3, name: "Chicken Burger", price: "$115" },
+            { image: menu4, name: "Chicken Burger", price: "$115" },
+            { image: menu5, name: "Chicken Burger", price: "$115" },
+            { image: menu6, name: "Chicken Burger", price: "$115" },
+            { image: menu7, name: "Chicken Burger", price: "$115" },
+            { image: menu8, name: "Chicken Burger", price: "$115" }
+        ],
+        lunch: [
+            { image: menu1, name: "Chicken Burger", price: "$115" },
+            { image: menu2, name: "Chicken Burger", price: "$115" },
+            { image: menu3, name: "Chicken Burger", price: "$115" },
+            { image: menu4, name: "Chicken Burger", price: "$115" },
+            { image: menu5, name: "Chicken Burger", price: "$115" },
+            { image: menu6, name: "Chicken Burger", price: "$115" },
+            { image: menu7, name: "Chicken Burger", price: "$115" },
+            { image: menu8, name: "Chicken Burger", price: "$115" }
+        ],
+        dinner: [
+            { image: menu1, name: "Chicken Burger", price: "$115" },
+            { image: menu2, name: "Chicken Burger", price: "$115" },
+            { image: menu3, name: "Chicken Burger", price: "$115" },
+            { image: menu4, name: "Chicken Burger", price: "$115" },
+            { image: menu5, name: "Chicken Burger", price: "$115" },
+            { image: menu6, name: "Chicken Burger", price: "$115" },
+            { image: menu7, name: "Chicken Burger", price: "$115" },
+            { image: menu8, name: "Chicken Burger", price: "$115" }
+        ]
+    };
+
     return (
         <div className="container-xxl py-5">
             <div className="container">
@@ -20,7 +58,12 @@ function Menu() {
                 <div className="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul className="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                         <li className="nav-item">
-                            <a className="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                            <a
+                                className={`d-flex align-items-center text-start mx-3 ms-0 pb-3 ${activeTab === 'tab-1' ? 'active' : ''}`}
+                                onClick={() => setActiveTab('tab-1')}
+                                href="#tab-1"
+                                data-bs-toggle="pill"
+                            >
                                 <i className="fa fa-coffee fa-2x text-primary"></i>
                                 <div className="ps-3">
                                     <small className="text-body">Popular</small>
@@ -29,7 +72,12 @@ function Menu() {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                            <a
+                                className={`d-flex align-items-center text-start mx-3 pb-3 ${activeTab === 'tab-2' ? 'active' : ''}`}
+                                onClick={() => setActiveTab('tab-2')}
+                                href="#tab-2"
+                                data-bs-toggle="pill"
+                            >
                                 <i className="fa fa-hamburger fa-2x text-primary"></i>
                                 <div className="ps-3">
                                     <small className="text-body">Special</small>
@@ -38,7 +86,12 @@ function Menu() {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                            <a
+                                className={`d-flex align-items-center text-start mx-3 me-0 pb-3 ${activeTab === 'tab-3' ? 'active' : ''}`}
+                                onClick={() => setActiveTab('tab-3')}
+                                href="#tab-3"
+                                data-bs-toggle="pill"
+                            >
                                 <i className="fa fa-utensils fa-2x text-primary"></i>
                                 <div className="ps-3">
                                     <small className="text-body">Lovely</small>
@@ -48,64 +101,43 @@ function Menu() {
                         </li>
                     </ul>
                     <div className="tab-content">
-                        <div id="tab-1" className="tab-pane fade show p-0 active">
+                        <div id="tab-1" className={`tab-pane fade show p-0 ${activeTab === 'tab-1' ? 'active' : ''}`}>
                             <div className="row g-4">
-                                {/* Breakfast menu items */}
-                                <MenuItem image={menu1} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu2} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu3} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu4} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu5} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu6} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu7} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu8} name="Chicken Burger" price="$115" />
+                                {menuItems.breakfast.map((item, index) => (
+                                    <MenuItem
+                                        key={index}
+                                        image={item.image}
+                                        name={item.name}
+                                        price={item.price}
+                                    />
+                                ))}
                             </div>
                         </div>
-                        <div id="tab-2" className="tab-pane fade show p-0">
+                        <div id="tab-2" className={`tab-pane fade show p-0 ${activeTab === 'tab-2' ? 'active' : ''}`}>
                             <div className="row g-4">
-                                {/* Launch menu items */}
-                                <MenuItem image={menu1} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu2} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu3} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu4} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu5} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu6} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu7} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu8} name="Chicken Burger" price="$115" />
+                                {menuItems.lunch.map((item, index) => (
+                                    <MenuItem
+                                        key={index}
+                                        image={item.image}
+                                        name={item.name}
+                                        price={item.price}
+                                    />
+                                ))}
                             </div>
                         </div>
-                        <div id="tab-3" className="tab-pane fade show p-0">
+                        <div id="tab-3" className={`tab-pane fade show p-0 ${activeTab === 'tab-3' ? 'active' : ''}`}>
                             <div className="row g-4">
-                                {/* Dinner menu items */}
-                                <MenuItem image={menu1} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu2} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu3} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu4} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu5} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu6} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu7} name="Chicken Burger" price="$115" />
-                                <MenuItem image={menu8} name="Chicken Burger" price="$115" />
+                                {menuItems.dinner.map((item, index) => (
+                                    <MenuItem
+                                        key={index}
+                                        image={item.image}
+                                        name={item.name}
+                                        price={item.price}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-// MenuItem Component
-function MenuItem({ image, name, price }) {
-    return (
-        <div className="col-lg-6">
-            <div className="d-flex align-items-center">
-                <img className="flex-shrink-0 img-fluid rounded" src={image} alt="" style={{ width: '80px' }} />
-                <div className="w-100 d-flex flex-column text-start ps-4">
-                    <h5 className="d-flex justify-content-between border-bottom pb-2">
-                        <span>{name}</span>
-                        <span className="text-primary">{price}</span>
-                    </h5>
-                    <small className="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
                 </div>
             </div>
         </div>

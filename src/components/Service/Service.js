@@ -1,47 +1,48 @@
 import React from 'react';
 import './Service.css';
+import ServiceItem from '../ServiceItem/ServiceItem';
 
 function Service() {
+    const services = [
+        {
+            icon: "fa fa-3x fa-user-tie text-primary mb-4",
+            title: "Master Chefs",
+            description: "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+            delay: "0.1s"
+        },
+        {
+            icon: "fa fa-3x fa-utensils text-primary mb-4",
+            title: "Quality Food",
+            description: "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+            delay: "0.3s"
+        },
+        {
+            icon: "fa fa-3x fa-cart-plus text-primary mb-4",
+            title: "Online Order",
+            description: "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+            delay: "0.5s"
+        },
+        {
+            icon: "fa fa-3x fa-headset text-primary mb-4",
+            title: "24/7 Service",
+            description: "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+            delay: "0.7s"
+        }
+    ];
+
     return (
         <div className="container-xxl py-5">
             <div className="container">
                 <div className="row g-4">
-                    <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div className="service-item rounded pt-3">
-                            <div className="p-4">
-                                <i className="fa fa-3x fa-user-tie text-primary mb-4"></i>
-                                <h5>Master Chefs</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div className="service-item rounded pt-3">
-                            <div className="p-4">
-                                <i className="fa fa-3x fa-utensils text-primary mb-4"></i>
-                                <h5>Quality Food</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div className="service-item rounded pt-3">
-                            <div className="p-4">
-                                <i className="fa fa-3x fa-cart-plus text-primary mb-4"></i>
-                                <h5>Online Order</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div className="service-item rounded pt-3">
-                            <div className="p-4">
-                                <i className="fa fa-3x fa-headset text-primary mb-4"></i>
-                                <h5>24/7 Service</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                            </div>
-                        </div>
-                    </div>
+                    {services.map((service, index) => (
+                        <ServiceItem
+                            key={index}
+                            icon={service.icon}
+                            title={service.title}
+                            description={service.description}
+                            delay={service.delay}
+                        />
+                    ))}
                 </div>
             </div>
         </div>

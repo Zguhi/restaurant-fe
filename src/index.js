@@ -4,8 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// Import Bootstrap CSS
+// Bootstrap and Font Awesome (nếu cần)
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 // Import jQuery và Bootstrap JS
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -19,6 +22,11 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 // Import thư viện OwlCarousel sau khi đã khai báo jQuery
 import 'owl.carousel';
+
+// Global styles
+import './styles/variables.css';
+import './styles/global.css';
+import './styles/animations.css';
 
 window.jQuery = window.$ = $; // Cần thiết cho các plugin jQuery
 
