@@ -1,0 +1,10 @@
+// src/styles/main.scss
+
+// Import biến tùy chỉnh từ _variables.scss
+@import "variables";
+
+// Import Bootstrap với các biến tùy chỉnh
+@import "~bootstrap/scss/bootstrap";
+
+// Import các style toàn cục
+@import "global";

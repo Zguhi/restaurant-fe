@@ -1,0 +1,26 @@
+// src/styles/_variables.scss
+
+// Bootstrap overrides - variables bạn đã định nghĩa trong bootstrap.scss
+$primary: #FEA116;
+$light: #F1F8FF;
+$dark: #0F172B;
+
+$font-family-base: 'Heebo', sans-serif;
+$headings-font-family: 'Nunito', sans-serif;
+
+$body-bg: $light;
+$body-color: #666565;
+$headings-color: $dark;
+
+$headings-font-weight: 800;
+$display-font-weight: 800;
+
+$enable-responsive-font-sizes: true;
+$border-radius: 2px;
+$link-decoration: none;
+$enable-negative-margins: true;
+
+// Thêm các biến tùy chỉnh của bạn (không phải của Bootstrap)
+$ff-secondary: 'Pacifico', cursive;
+$fw-medium: 600;
+$fw-semi-bold: 700;

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "@popperjs/core": "^2.11.8",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
@@ -19,6 +20,7 @@
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^7.2.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.85.1",
     "tempusdominus-bootstrap-4": "^5.39.2",
     "web-vitals": "^2.1.4",
     "wowjs": "^1.1.3"
