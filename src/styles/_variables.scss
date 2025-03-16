@@ -1,26 +1,103 @@
 // src/styles/_variables.scss
 
-// Bootstrap overrides - variables bạn đã định nghĩa trong bootstrap.scss
+/********** Bootstrap Overrides **********/
+// Colors
 $primary: #FEA116;
+$secondary: #0F172B;
 $light: #F1F8FF;
 $dark: #0F172B;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
 
+// Typography
 $font-family-base: 'Heebo', sans-serif;
 $headings-font-family: 'Nunito', sans-serif;
+$headings-font-weight: 800;
+$display-font-weight: 800;
 
+// Body
 $body-bg: $light;
 $body-color: #666565;
 $headings-color: $dark;
 
-$headings-font-weight: 800;
-$display-font-weight: 800;
-
+// Options
 $enable-responsive-font-sizes: true;
-$border-radius: 2px;
-$link-decoration: none;
 $enable-negative-margins: true;
 
-// Thêm các biến tùy chỉnh của bạn (không phải của Bootstrap)
+// Component settings
+$border-radius: 2px;
+$link-decoration: none;
+
+/********** Custom Variables **********/
+// Font related
 $ff-secondary: 'Pacifico', cursive;
+$fw-light: 300;
+$fw-normal: 400;
 $fw-medium: 600;
 $fw-semi-bold: 700;
+$fw-bold: 800;
+
+// Font sizes
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2rem;
+
+// Spacing
+$spacer: 1rem;
+$section-padding: 5rem;
+$spacers: (
+        0: 0,
+        1: $spacer * 0.25,  // 0.25rem = 4px
+        2: $spacer * 0.5,   // 0.5rem = 8px
+        3: $spacer,         // 1rem = 16px
+        4: $spacer * 1.5,   // 1.5rem = 24px
+        5: $spacer * 3,     // 3rem = 48px
+        6: $spacer * 6,     // 6rem = 96px
+);
+
+// Breakpoints (sử dụng giá trị Bootstrap mặc định)
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+// Container widths
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px
+);
+
+// Navbar
+$navbar-dark-color: rgba(white, 0.9);
+$navbar-dark-hover-color: $primary;
+$navbar-padding-y: 1rem;
+$navbar-padding-x: 1.5rem;
+
+// Buttons
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$btn-font-size: 1rem;
+$btn-border-radius: 0;
+
+// Animation
+$transition-base: all 0.3s ease-in-out;
+$animation-duration: 1.5s;
+
+// Z-index values
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-modal-backdrop: 1050;
+$zindex-modal: 1055;
+$zindex-spinner: 99999;

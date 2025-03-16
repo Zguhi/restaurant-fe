@@ -1,0 +1,173 @@
+/********** Header Component Styles **********/
+
+// Variables
+$primary: #FEA116;
+$secondary: #0F172B;
+$light: #F1F8FF;
+$dark: #0F172B;
+
+.sticky-top {
+  top: -100px;
+  transition: 0.5s;
+  position: sticky;
+  z-index: 999;
+
+  &.sticky-nav {
+    top: 0;
+    animation: fadeInDown 0.5s ease-in-out;
+  }
+}
+
+/***** Spinner *****/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+
+  &.show {
+    transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/***** Navbar *****/
+.navbar-dark {
+  .navbar-nav {
+    .nav-link {
+      font-family: 'Nunito', sans-serif;
+      position: relative;
+      margin-left: 25px;
+      padding: 35px 0;
+      color: $light;
+      font-size: 1rem;
+      font-weight: 700;
+      outline: none;
+      transition: 0.5s;
+
+      &:hover,
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+
+  &.sticky-top {
+    .navbar-nav {
+      .nav-link {
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-nav .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+}
+
+/***** Hero Section *****/
+.hero-header {
+  background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)), url('../../assets/images/bg-hero.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  img {
+    animation: imgRotate 50s linear infinite;
+  }
+}
+
+/***** Animations *****/
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imgRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animated {
+  animation-duration: 1.5s;
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/***** Utility Classes *****/
+.text-primary {
+  color: $primary !important;
+}
+
+.bg-dark {
+  background-color: $dark !important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+}
+
+/***** Responsive *****/
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-nav .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-header {
+    .display-3 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .container-xxl.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-header {
+    .display-3 {
+      font-size: 2rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1.5rem !important;
+      font-size: 0.9rem !important;
+    }
+  }
+}
