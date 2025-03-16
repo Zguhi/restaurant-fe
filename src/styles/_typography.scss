@@ -1,0 +1,143 @@
+// Typography styles for Restoran theme
+@import 'variables';
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: 1.2;
+  color: $dark;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+// Display headings - thường được sử dụng cho hero sections
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.display-1 {
+  font-size: 5rem;
+}
+
+.display-2 {
+  font-size: 4.5rem;
+}
+
+.display-3 {
+  font-size: 4rem;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+}
+
+.display-5 {
+  font-size: 3rem;
+}
+
+.display-6 {
+  font-size: 2.5rem;
+}
+
+// Paragraphs
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  &.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+}
+
+// Font styles
+.text-primary {
+  color: $primary !important;
+}
+
+.text-secondary {
+  color: $secondary !important;
+}
+
+.text-body {
+  color: $body-color !important;
+}
+
+.text-white {
+  color: #FFFFFF !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-start {
+  text-align: left !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+// Text transforms
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.fst-italic {
+  font-style: italic !important;
+}
+
+// Responsive typography
+@media (max-width: 1200px) {
+  .display-1 { font-size: 4.5rem; }
+  .display-2 { font-size: 4rem; }
+  .display-3 { font-size: 3.5rem; }
+}
+
+@media (max-width: 992px) {
+  .display-1 { font-size: 4rem; }
+  .display-2 { font-size: 3.5rem; }
+  .display-3 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+  .display-1 { font-size: 3.5rem; }
+  .display-2 { font-size: 3rem; }
+  .display-3 { font-size: 2.5rem; }
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 576px) {
+  .display-1 { font-size: 3rem; }
+  .display-2 { font-size: 2.5rem; }
+  .display-3 { font-size: 2rem; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Menu.css';
+import './Menu.scss';
 import MenuItem from '../MenuItem/MenuItem';
 
 // Lưu ý: Đường dẫn hình ảnh có thể cần điều chỉnh

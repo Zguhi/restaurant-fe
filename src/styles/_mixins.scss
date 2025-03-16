@@ -1,0 +1,66 @@
+// Custom mixins for Restoran theme
+
+// Transitions
+@mixin transition($property: all, $time: 0.5s, $easing: ease) {
+  transition: $property $time $easing;
+}
+
+// Border radius
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Box shadow
+@mixin box-shadow($shadow...) {
+  box-shadow: $shadow;
+}
+
+// Media queries
+@mixin media-breakpoint-up($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 576px) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: 992px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: 1200px) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (min-width: 1400px) { @content; }
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 575.98px) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: 767.98px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: 991.98px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: 1199.98px) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (max-width: 1399.98px) { @content; }
+  }
+}
+
+// Gradient backgrounds
+@mixin gradient-bg($color, $opacity1: 0.1, $opacity2: 0.1) {
+  background: linear-gradient(rgba(15, 23, 43, $opacity1), rgba(15, 23, 43, $opacity2)), $color;
+}
+
+// Text truncate
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Clearfix
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

@@ -1,0 +1,97 @@
+// Animations for Restoran theme
+
+// Keyframes definitions
+@keyframes imgRotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// Animation classes
+   .animated {
+       animation-duration: 1.5s;
+   }
+
+.slideInLeft {
+    animation-name: slideInLeft;
+}
+
+.slideInRight {
+    animation-name: slideInRight;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
+// WOW Animation Delay
+@for $i from 1 through 8 {
+    [data-wow-delay="#{$i/10}s"] {
+        animation-delay: #{$i/10}s;
+    }
+}
+
+// For wow.js compatibility
+   .wow {
+       visibility: hidden;
+   }

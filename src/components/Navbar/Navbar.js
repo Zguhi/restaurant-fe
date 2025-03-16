@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css';
+import './Navbar.scss';
 
 function Navbar() {
     const [isSticky, setIsSticky] = useState(false);

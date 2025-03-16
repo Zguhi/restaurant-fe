@@ -1,5 +1,5 @@
 import React from 'react';
-import './ServiceItem.css';
+import './ServiceItem.scss';
 
 function ServiceItem({ icon, title, description, delay }) {
     return (

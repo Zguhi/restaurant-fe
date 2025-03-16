@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './Testimonial.css';
+import './Testimonial.scss';
 import TestimonialItem from '../TestimonialItem/TestimonialItem';
 
 // Lưu ý: Đường dẫn hình ảnh có thể cần điều chỉnh

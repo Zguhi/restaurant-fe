@@ -1,5 +1,5 @@
 import React from 'react';
-import './Team.css';
+import './Team.scss';
 import TeamMember from '../TeamMember/TeamMember';
 
 // Lưu ý: Đường dẫn hình ảnh có thể cần điều chỉnh

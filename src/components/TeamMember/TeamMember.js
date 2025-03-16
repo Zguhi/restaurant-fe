@@ -1,5 +1,5 @@
 import React from 'react';
-import './TeamMember.css';
+import './TeamMember.scss';
 
 function TeamMember({ image, name, position, delay }) {
     return (

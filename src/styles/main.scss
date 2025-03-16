@@ -1,10 +1,14 @@
-// src/styles/main.scss
+// Base imports
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+@import 'animations';
+@import 'global';
 
-// Import biến tùy chỉnh từ _variables.scss
-@import "variables";
+// Nếu cần import CSS của Bootstrap hoặc thư viện khác
+// @import '~bootstrap/scss/bootstrap';
 
-// Import Bootstrap với các biến tùy chỉnh
-@import "~bootstrap/scss/bootstrap";
-
-// Import các style toàn cục
-@import "global";
+// Import các component CSS riêng biệt nếu cần
+// @import '../components/Header/Header.scss';
+// @import '../components/Footer/Footer.scss';
+// Hoặc bạn có thể import chúng trực tiếp trong các file component

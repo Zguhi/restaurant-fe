@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './BackToTop.css';
+import './BackToTop.scss';
 
 function BackToTop() {
     const [isVisible, setIsVisible] = useState(false);

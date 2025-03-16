@@ -1,5 +1,5 @@
 import React from 'react';
-import './TestimonialItem.css';
+import './TestimonialItem.scss';
 
 function TestimonialItem({ image, text, name, profession }) {
     return (

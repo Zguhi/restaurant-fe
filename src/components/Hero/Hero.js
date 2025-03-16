@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Hero.css';
+import './Hero.scss';
 // Lưu ý: Đường dẫn hình ảnh có thể cần điều chỉnh theo cấu trúc project của bạn
 import heroImage from '../../assets/images/hero.png';
 

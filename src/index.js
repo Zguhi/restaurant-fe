@@ -29,7 +29,7 @@ import 'owl.carousel';
 // Global styles
 import './styles/_variables.scss';
 import './styles/_global.scss';
-import './styles/animations.css';
+import './styles/_animations.scss';
 
 window.jQuery = window.$ = $; // Cần thiết cho các plugin jQuery
 
