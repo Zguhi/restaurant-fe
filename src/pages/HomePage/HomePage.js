@@ -6,7 +6,7 @@ import Hero from '../../components/Hero/Hero';
 import About from '../../components/About/About';
 import Menu from '../../components/Menu/Menu';
 import Reservation from '../../components/Reservation/Reservation';
-import './HomePage.css';
+import './HomePage.scss';
 
 function HomePage() {
     return (

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Team from  '../../components/Team/Team'
-import './AboutPage.css';
+import './AboutPage.scss';
 
 function AboutPage() {
     return (

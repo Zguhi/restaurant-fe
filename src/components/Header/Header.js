@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.scss';
-import logoImg from '../assets/images/logo.png'; // Cập nhật đường dẫn tới logo của bạn
+//import logoImg from '../assets/images/logo.png'; // Cập nhật đường dẫn tới logo của bạn
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);

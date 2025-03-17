@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Reservation from '../../components/Reservation/Reservation';
-import './BookingPage.css';
+import './BookingPage.scss';
 
 function BookingPage() {
     return (

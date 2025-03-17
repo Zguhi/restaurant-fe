@@ -1,16 +1,20 @@
+// Import variables và mixins
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .service-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    transition: .5s;
+    @include box-shadow(0 0 45px rgba(0, 0, 0, 0.08)); // sử dụng mixin box-shadow
+    @include transition(all, 0.5s); // sử dụng mixin transition
 
     * {
-        transition: .5s;
+        @include transition(all, 0.5s); // sử dụng mixin transition
     }
 
     &:hover {
-        background: var(--primary);
+        background: $primary; // thay var(--primary) bằng biến $primary
 
         * {
-            color: var(--light) !important;
+            color: $light !important; // thay var(--light) bằng biến $light
         }
     }
 }

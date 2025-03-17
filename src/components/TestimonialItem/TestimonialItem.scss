@@ -1,3 +1,7 @@
+// Import variables và mixins
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .testimonial-item {
-    transition: .5s;
+    @include transition(all, 0.5s); // sử dụng mixin transition thay vì CSS transition trực tiếp
 }

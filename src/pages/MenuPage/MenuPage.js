@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Menu from '../../components/Menu/Menu';
-import './MenuPage.css';
+import './MenuPage.scss';
 
 function MenuPage() {
     return (

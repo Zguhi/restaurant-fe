@@ -1,3 +1,7 @@
+// Import variables và mixins
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .footer {
     .btn {
         &.btn-social {
@@ -7,13 +11,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--light);
+            color: $light; // thay var(--light) bằng biến $light
             border: 1px solid #FFFFFF;
-            border-radius: 35px;
-            transition: .3s;
+            @include border-radius(35px); // sử dụng mixin
+            @include transition(all, 0.3s); // sử dụng mixin
 
             &:hover {
-                color: var(--primary);
+                color: $primary; // thay var(--primary) bằng biến $primary
             }
         }
 
@@ -26,7 +30,7 @@
             font-size: 15px;
             font-weight: normal;
             text-transform: capitalize;
-            transition: .3s;
+            @include transition(all, 0.3s); // sử dụng mixin
 
             &::before {
                 position: relative;
@@ -46,10 +50,10 @@
     .copyright {
         padding: 25px 0;
         font-size: 15px;
-        border-top: 1px solid rgba(256, 256, 256, .1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
 
         a {
-            color: var(--light);
+            color: $light; // thay var(--light) bằng biến $light
         }
     }
 
@@ -57,7 +61,7 @@
         a {
             margin-right: 15px;
             padding-right: 15px;
-            border-right: 1px solid rgba(255, 255, 255, .1);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
 
             &:last-child {
                 margin-right: 0;

@@ -1,9 +1,16 @@
+// Import variables và mixins
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .back-to-top {
     position: fixed;
     display: none;
     right: 45px;
     bottom: 45px;
     z-index: 99;
+
+    // Có thể sử dụng transition mixin
+    @include transition(all, 0.3s);
 
     &.active {
         display: block;

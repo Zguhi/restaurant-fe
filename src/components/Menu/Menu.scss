@@ -1,8 +1,12 @@
+// Import variables và mixins
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 /* Food Menu tabs */
 .nav-pills {
     .nav-item {
         .active {
-            border-bottom: 2px solid var(--primary);
+            border-bottom: 2px solid $primary; // thay var(--primary) bằng biến $primary
         }
     }
 }

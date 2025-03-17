@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Testimonial from '../../components/Testimonial/Testimonial';
-import './TestimonialPage.css';
+import './TestimonialPage.scss';
 
 function TestimonialPage() {
     return (

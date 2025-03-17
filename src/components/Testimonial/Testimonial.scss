@@ -1,13 +1,17 @@
+// Import variables và mixins
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .testimonial-carousel {
     .owl-item {
         &.center {
             .testimonial-item {
-                background: var(--primary) !important;
-                border-color: var(--primary) !important;
+                background: $primary !important; // thay var(--primary) bằng biến $primary
+                border-color: $primary !important; // thay var(--primary) bằng biến $primary
 
                 * {
-                    color: var(--light) !important;
-                    transition: .5s;
+                    color: $light !important; // thay var(--light) bằng biến $light
+                    @include transition(all, 0.5s); // sử dụng mixin transition
                 }
             }
         }
@@ -27,12 +31,12 @@
         width: 15px;
         height: 15px;
         border: 1px solid #CCCCCC;
-        border-radius: 15px;
-        transition: .5s;
+        @include border-radius(15px); // sử dụng mixin border-radius
+        @include transition(all, 0.5s); // sử dụng mixin transition
 
         &.active {
-            background: var(--primary);
-            border-color: var(--primary);
+            background: $primary; // thay var(--primary) bằng biến $primary
+            border-color: $primary; // thay var(--primary) bằng biến $primary
         }
     }
 }

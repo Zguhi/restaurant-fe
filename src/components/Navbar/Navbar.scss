@@ -1,3 +1,7 @@
+// Import variables và mixins
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .navbar-dark {
     .navbar-nav {
         .nav-link {
@@ -5,15 +9,15 @@
             margin-left: 25px;
             padding: 35px 0;
             font-size: 15px;
-            color: var(--light) !important;
+            color: $light !important; // thay var(--light) bằng biến $light
             text-transform: uppercase;
             font-weight: 500;
             outline: none;
-            transition: .5s;
+            @include transition(all, 0.5s); // sử dụng mixin
 
             &:hover,
             &.active {
-                color: var(--primary) !important;
+                color: $primary !important; // thay var(--primary) bằng biến $primary
             }
         }
     }
@@ -21,7 +25,7 @@
     .navbar-brand {
         img {
             max-height: 60px;
-            transition: .5s;
+            @include transition(all, 0.5s); // sử dụng mixin
         }
     }
 }
@@ -42,7 +46,8 @@
     }
 }
 
-@media (max-width: 991.98px) {
+// Sử dụng mixin media-breakpoint-down thay vì @media trực tiếp
+@include media-breakpoint-down(lg) {
     .sticky-top {
         &.navbar-dark {
             position: relative;
@@ -52,7 +57,7 @@
     .navbar-dark {
         .navbar-collapse {
             margin-top: 15px;
-            border-top: 1px solid rgba(255, 255, 255, .1)
+            border-top: 1px solid rgba(255, 255, 255, 0.1)
         }
 
         .navbar-nav {
@@ -70,7 +75,8 @@
     }
 }
 
-@media (min-width: 992px) {
+// Sử dụng mixin media-breakpoint-up thay vì @media trực tiếp
+@include media-breakpoint-up(lg) {
     .navbar-dark {
         position: absolute;
         width: 100%;
@@ -83,7 +89,7 @@
     .sticky-top {
         &.navbar-dark {
             position: fixed;
-            background: var(--dark) !important;
+            background: $dark !important; // thay var(--dark) bằng biến $dark
         }
     }
 }
