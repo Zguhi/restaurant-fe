@@ -23,19 +23,13 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 // Import thư viện OwlCarousel sau khi đã khai báo jQuery
 import 'owl.carousel';
 
-// Global styles
-import './styles/_variables.scss';
-import './styles/_global.scss';
-import './styles/_animations.scss';
-
 window.jQuery = window.$ = $; // Cần thiết cho các plugin jQuery
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
-
-
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );
 
 reportWebVitals();
