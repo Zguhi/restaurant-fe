@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-//Import các trang
-
+// Import các trang
 import HomePage from './pages/HomePage/HomePage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ServicePage from './pages/ServicePage/ServicePage';
@@ -18,7 +17,6 @@ import Spinner from './components/Spinner/Spinner';
 
 // Import scrollToTop utility
 import { initScrollToTop } from './utils/scrollToTop';
-import {eventWrapper} from "@testing-library/user-event/dist/utils";
 
 function App() {
   useEffect(() => {
@@ -34,7 +32,23 @@ function App() {
     initScrollToTop();
   }, []);
 
-  return (eventWrapper());
+  return (
+      <Router>
+        <div className="App">
+          <Spinner />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/service" element={<ServicePage />} />
+            <Route path="/menu" element={<MenuPage />} />
+            <Route path="/booking" element={<BookingPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/testimonial" element={<TestimonialPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </div>
+      </Router>
+  );
 }
 
 export default App;

@@ -16,14 +16,15 @@ import './styles/main.scss';
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+// Import thư viện OwlCarousel sau khi đã khai báo jQuery
+import 'owl.carousel';
+
 // Import CSS của OwlCarousel
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-// Import thư viện OwlCarousel sau khi đã khai báo jQuery
-import 'owl.carousel';
-
 window.jQuery = window.$ = $; // Cần thiết cho các plugin jQuery
+//console.log($.fn.jquery);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
